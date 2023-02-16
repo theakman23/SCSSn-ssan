@@ -1,0 +1,257 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=Poppins:wght@200;300;400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.başlık, #cars-section h1, #slogan h2, #slogan h1, .design h1, #exterior h1, #interior h1 {
+  font-family: "Poppins", sans-serif;
+  white-space: nowrap;
+  letter-spacing: 3px;
+}
+
+.hover, #slogan button:hover, .design button:hover, #exterior button:hover, #interior button:hover {
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.design, #exterior, #interior {
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+}
+.design p, #exterior p, #interior p {
+  max-width: 500px;
+  font-size: 24px;
+  text-align: center;
+}
+.design h1, #exterior h1, #interior h1 {
+  font-size: 30px;
+}
+.design button, #exterior button, #interior button {
+  padding: 20px 50px;
+  background-color: transparent;
+  color: white;
+  border: 2px solid whitesmoke;
+  font-weight: 700;
+  letter-spacing: 5px;
+  transition: background-color 0.5s;
+}
+.design button:hover, #exterior button:hover, #interior button:hover {
+  background-color: whitesmoke;
+  color: black;
+  transition: background-color 0.5s;
+}
+
+body {
+  background-color: #eaeaea;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Inter", sans-serif;
+  color: #252a34;
+}
+header nav {
+  display: flex;
+  align-items: center;
+}
+header nav a {
+  text-decoration: none;
+  color: #252a34;
+  transition: color 0.3s, text-shadow 0.3s;
+  white-space: nowrap;
+}
+header nav a:hover {
+  color: #e50000 !important;
+  text-shadow: 2px 2px 10px #e50000;
+  transition: all 0.5s ease;
+}
+header #nav-left img {
+  max-width: 50px;
+}
+header #nav-left a {
+  font-size: 15px;
+  font-weight: 600;
+  border-right: 1px solid;
+  padding: 0 10px;
+}
+header #nav-right a {
+  font-size: 14px;
+  color: grey;
+  padding: 0 10px;
+}
+
+.hero {
+  min-height: calc(100vh - 68px);
+  padding: 50px;
+  background: linear-gradient(to top, #eaeaea 50%, rgb(215, 215, 215) 50%);
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 1000px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 1001px) and (max-width: 1500px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+#slogan {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  align-items: center;
+  gap: 50px;
+}
+#slogan h1 {
+  font-size: 30px;
+}
+#slogan p {
+  text-align: center;
+}
+#slogan img {
+  max-width: 400px;
+  mix-blend-mode: darken;
+}
+#slogan h2 {
+  font-size: 26px;
+}
+#slogan button {
+  background-color: #e50000;
+  padding: 10px 50px;
+  border: none;
+  font-weight: 700;
+  color: wheat;
+  letter-spacing: 3px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+#slogan button:hover {
+  background-color: rgb(150, 0, 0);
+}
+
+#images {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+}
+#images-main {
+  max-width: 900px;
+}
+@media (max-width: 1000px) {
+  #images-main {
+    max-width: 500px;
+  }
+}
+#images-second {
+  max-width: 400px;
+  mix-blend-mode: darken;
+}
+#images p {
+  text-align: center;
+  max-width: 500px;
+}
+
+#interior {
+  background: url(./interior.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#exterior {
+  background: url(./exterior-4.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+#cars-section {
+  margin: 100px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+#cars-section h1 {
+  text-align: center;
+}
+#cars-section .cars {
+  display: flex;
+  justify-content: center;
+  padding: 10px 100px;
+  gap: 50px;
+}
+@media (max-width: 1001px) and (max-width: 1500px) {
+  #cars-section .cars {
+    gap: 30px;
+  }
+}
+@media (max-width: 1000px) {
+  #cars-section .cars {
+    flex-direction: column;
+  }
+}
+#cars-section .cars-card {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 1001px) and (max-width: 1500px) {
+  #cars-section .cars-card {
+    width: 300px;
+  }
+}
+#cars-section .cars-card img {
+  width: 100%;
+  mix-blend-mode: darken;
+}
+#cars-section .cars-card h4 {
+  text-align: center;
+  white-space: nowrap;
+}
+#cars-section button {
+  margin: 0 auto;
+  padding: 10px 50px;
+  background-color: #08d9d6;
+  border-radius: 5px;
+  transition: background-color 0.5s;
+}
+#cars-section button:hover {
+  background-color: coral;
+  transition: background-color 0.5s;
+}
+
+footer {
+  background-color: black;
+  display: flex;
+  gap: 50px;
+  padding: 35px;
+  align-items: center;
+  justify-content: center;
+}
+footer img {
+  max-width: 200px;
+}
+footer p {
+  color: white;
+}/*# sourceMappingURL=style.css.map */

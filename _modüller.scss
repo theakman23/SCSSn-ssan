@@ -1,0 +1,54 @@
+.başlık{
+    font-family: $font-second;
+    white-space: nowrap;
+    letter-spacing: 3px;
+}
+
+.hover{
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.design{
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+
+    p{
+        max-width: 500px;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    h1{
+        @extend .başlık;
+        font-size: 30px;
+
+    }
+
+    button{
+        padding: 20px 50px;
+        background-color: transparent;
+        color: white;
+        border: 2px solid whitesmoke;
+        font-weight: 700;
+        letter-spacing: 5px;
+        transition: background-color 0.5s;
+
+        &:hover{
+            background-color: whitesmoke;
+            @extend .hover;
+            color: black;
+            transition: background-color 0.5s;
+
+
+        }
+    }
+
+}
